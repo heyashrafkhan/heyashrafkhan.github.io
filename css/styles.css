@@ -4078,7 +4078,7 @@ img.u-pull-left {
 
 @media screen and (max-width: 500px) {
     .contact-email {
-        --multiplier : .5;
+        --multiplier : .4;
     }
 
     .s-details footer {
