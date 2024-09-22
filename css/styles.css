@@ -2904,7 +2904,7 @@ img.u-pull-left {
  * ------------------------------------------------------------------- */
 .s-intro {
     --header-height     : 8.8rem;
-    --logo-width        : 78px;
+    --logo-width        : 28px;
     --text-display-size : 11.2rem;
     --text-multiplier   : 1;
     z-index             : 3;
