@@ -1,72 +1,3 @@
-/* =================================================================== 
- *  Knox Main Stylesheet
- *  Ver. 1.0.0
- *  03-23-2021
- * ------------------------------------------------------------------
- *
- *  TOC:
- *  # SETTINGS
- *      ## fonts 
- *      ## colors
- *      ## spacing and typescale
- *      ## grid variables
- *  # NORMALIZE
- *  # BASE SETUP
- *  # GRID
- *      ## large screen devices 
- *      ## medium screen devices 
- *      ## tablet devices 
- *      ## mobile devices 
- *      ## small screen devices 
- *  # UTILITY CLASSES
- *  # TYPOGRAPHY
- *      ## base type styles
- *      ## additional typography & helper classes
- *      ## lists
- *      ## spacing
- *  # PRELOADER
- *      ## page loaded
- *  # FORM
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- *  # BUTTONS
- *  # TABLE
- *  # COMPONENTS
- *      ## pagination
- *      ## alert box
- *      ## skillbars 
- *      ## stats tabs
- *  # PROJECT-WIDE SHARED STYLES
- *      ## media classes
- *      ## theme-specific typography classes
- *  # INTRO
- *      ## intro background
- *      ## intro slider
- *      ## intro particles
- *      ## intro header
- *      ## intro content
- *      ## intro counter
- *      ## intro social
- *      ## intro notify
- *      ## modal 
- *      ## intro scrolldown
- *      ## intro transitions
- *  # DETAILS
- *      ## tabs
- *      ## services
- *      ## contact
- *      ## go top
- *      ## footer 
- *
- * ------------------------------------------------------------------ */
-
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
@@ -1468,9 +1399,9 @@ code {
     margin        : 0 .2rem;
     padding       : calc(((var(--vspace-1) - 1.6rem) / 2) - .1rem) calc(.8rem - .1rem);
     white-space   : nowrap;
-    background    : var(--color-gray-1);
-    border        : 1px solid var(--color-gray-2);
-    color         : var(--color-text-dark);
+    background    : var(--color-1-darker);
+    border        : 1px solid var(--color-black);
+    color         : var(--color-white);
     border-radius : 3px;
 }
 
