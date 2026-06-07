@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio & Resume | Senior WordPress Developer &amp; Architect</title>
+    <title>Ashraf Khan | Senior WordPress Developer &amp; Architect</title>
     <meta name="description" content="Resume and portfolio of a Senior WordPress Developer &amp; Architect with 8+ years of experience, specializing in custom WordPress theme/plugin development, Gutenberg blocks, React, and WooCommerce.">
+    <link rel="canonical" href="https://heyashrafkhan.github.io/">
+    <meta name="author" content="Ashraf Khan">
+    
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' x='50%' text-anchor='middle' font-size='90' fill='%23C2410C' font-family='serif'%3EA%3C/text%3E%3C/svg%3E">
+    
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heyashrafkhan.github.io/">
+    <meta property="og:title" content="Portfolio &amp; Resume | Senior WordPress Developer &amp; Architect">
+    <meta property="og:description" content="Resume and portfolio of a Senior WordPress Developer &amp; Architect with 8+ years of experience, specializing in custom WordPress theme/plugin development, Gutenberg blocks, React, and WooCommerce.">
+    <!-- NOTE: Upload a 1200x630px image named og-image.jpg to your repo root for social sharing previews -->
+    <meta property="og:image" content="https://heyashrafkhan.github.io/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://heyashrafkhan.github.io/">
+    <meta name="twitter:title" content="Portfolio &amp; Resume | Senior WordPress Developer &amp; Architect">
+    <meta name="twitter:description" content="Resume and portfolio of a Senior WordPress Developer &amp; Architect with 8+ years of experience, specializing in custom WordPress theme/plugin development, Gutenberg blocks, React, and WooCommerce.">
+    <meta name="twitter:image" content="https://heyashrafkhan.github.io/og-image.jpg">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ashraf Khan",
+      "jobTitle": "Senior WordPress Developer and Architect",
+      "url": "https://heyashrafkhan.github.io/",
+      "sameAs": [
+        "https://github.com/heyashrafkhan",
+        "https://www.linkedin.com/in/heyashrafkhan"
+      ],
+      "knowsAbout": ["WordPress", "WooCommerce", "PHP", "JavaScript", "React", "Shopify", "Technical SEO", "Core Web Vitals"]
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +125,7 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="font-heading font-bold text-2xl tracking-tight text-zinc-900">
-                        Ashraf<span class="text-brand-600">.</span>
+                        Ashraf Khan<span class="text-brand-600">.</span>
                     </a>
                 </div>
                 
@@ -102,7 +141,7 @@
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-zinc-600 hover:text-zinc-900 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-zinc-600 hover:text-zinc-900 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -125,6 +164,8 @@
         </div>
     </nav>
 
+    <main>
+
     <!-- Hero Section (Adinaa.me Inspired) -->
     <section class="min-h-screen pt-32 pb-20 px-4 relative flex flex-col justify-center overflow-hidden bg-[#FAF6EE] text-[#1C1917]">
         <!-- Subtle Background Blur -->
@@ -138,7 +179,7 @@
                 <p class="text-[12px] font-mono uppercase tracking-[0.4em] text-zinc-400 mb-6 ml-1">Senior WordPress Developer &amp; Architect</p>
                 
                 <!-- Massive Typographic Name -->
-                <div class="flex flex-col group cursor-pointer select-none">
+                <h1 class="flex flex-col group cursor-pointer select-none m-0">
                     <span class="font-black text-[12vw] md:text-[100px] lg:text-[130px] uppercase tracking-tighter leading-[0.85] text-zinc-900 flex items-center overflow-hidden">
                         <span class="relative inline-block transition-transform duration-500 ease-out group-hover:translate-x-4">ASHRAF</span>
                         <span class="w-0 opacity-0 group-hover:w-8 md:group-hover:w-10 group-hover:opacity-100 transition-all duration-500 ease-out text-[#166534] ml-2 md:ml-4 font-light text-[8vw] md:text-[80px] leading-none mb-2 md:mb-4">•</span>
@@ -147,7 +188,7 @@
                     <span class="font-black text-[12vw] md:text-[100px] lg:text-[130px] uppercase tracking-tighter leading-[0.85] text-zinc-300 group-hover:text-brand-600 transition-colors duration-500 ease-out transform group-hover:translate-x-4">
                         KHAN
                     </span>
-                </div>
+                </h1>
                 
                 <!-- Recruiter Availability Status Badge -->
                 <div class="mt-10 flex items-center">
@@ -819,6 +860,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="bg-[#1C1917] text-zinc-500 py-8 text-center border-t border-[#C2410C]/10">
         <p>&copy; <script>document.write(new Date().getFullYear())</script> Ashraf. All rights reserved. Crafting high-performance WordPress &amp; WooCommerce architectures.</p>
@@ -845,6 +888,8 @@
         const menu = document.getElementById('mobile-menu');
 
         btn.addEventListener('click', () => {
+            const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', !isExpanded);
             menu.classList.toggle('hidden');
         });
 

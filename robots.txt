@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://heyashrafkhan.github.io/sitemap.xml
