@@ -12,12 +12,15 @@
     
     <!-- Preconnect to CDNs -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://heyashrafkhan.github.io/">
-    <meta property="og:title" content="Portfolio &amp; Resume | Senior WordPress Developer &amp; Architect">
+    <meta property="og:title" content="Ashraf Khan | Senior WordPress Developer &amp; Architect">
     <meta property="og:description" content="Resume and portfolio of a Senior WordPress Developer &amp; Architect with 8+ years of experience, specializing in custom WordPress theme/plugin development, Gutenberg blocks, React, and WooCommerce.">
     <!-- NOTE: Upload a 1200x630px image named og-image.jpg to your repo root for social sharing previews -->
     <meta property="og:image" content="https://heyashrafkhan.github.io/og-image.jpg">
@@ -25,7 +28,7 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://heyashrafkhan.github.io/">
-    <meta name="twitter:title" content="Portfolio &amp; Resume | Senior WordPress Developer &amp; Architect">
+    <meta name="twitter:title" content="Ashraf Khan | Senior WordPress Developer &amp; Architect">
     <meta name="twitter:description" content="Resume and portfolio of a Senior WordPress Developer &amp; Architect with 8+ years of experience, specializing in custom WordPress theme/plugin development, Gutenberg blocks, React, and WooCommerce.">
     <meta name="twitter:image" content="https://heyashrafkhan.github.io/og-image.jpg">
     
@@ -45,16 +48,17 @@
     }
     </script>
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts - Optimized with display=swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome for Icons (Defer loading) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS (Defer loading) -->
+    <script src="https://cdn.tailwindcss.com" async></script>
     <script>
         tailwind.config = {
             theme: {
@@ -79,29 +83,35 @@
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .glass {
-                @apply bg-[#FAF6EE]/80 backdrop-blur-md border border-[#C2410C]/10 shadow-none;
-            }
-            .dark-glass {
-                @apply bg-zinc-100/70 backdrop-blur-md border border-slate-200/50 shadow-none;
-            }
-        }
-        
-        body {
-            @apply bg-[#FAF6EE] text-[#1C1917] antialiased selection:bg-brand-600 selection:text-white;
-        }
+</head>
+<body class="bg-[#FAF6EE] text-[#1C1917] antialiased selection:bg-brand-600 selection:text-white relative">
 
+    <style>
+        /* Critical CSS - Inlined for performance */
+        .glass {
+            background-color: rgba(250, 246, 238, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(194, 65, 12, 0.1);
+            box-shadow: none;
+        }
+        .dark-glass {
+            background-color: rgba(24, 24, 27, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            box-shadow: none;
+        }
         .gradient-text {
-            @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-[#166534];
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #C2410C, #166534);
         }
-
-        /* Micro-animations */
         .hover-lift {
-            @apply transition-transform duration-300 hover:-translate-y-1;
+            transition: transform 0.3s ease;
         }
-
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
         @keyframes border-glow {
             0%, 100% {
                 border-color: rgba(194, 65, 12, 0.2);
@@ -115,9 +125,16 @@
         .animate-border-glow {
             animation: border-glow 2.5s infinite ease-in-out;
         }
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        .animate-ping {
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
     </style>
-</head>
-<body class="bg-[#FAF6EE] relative">
 
     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
